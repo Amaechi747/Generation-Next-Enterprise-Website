@@ -1,0 +1,148 @@
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto; 
+  display: flex;
+  /* i changed the margin from auto to none */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom:10% ; 
+  /*bottom: Formerly 8px */
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.number-text {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+.dorcas{
+  margin: auto;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 2.5%;
+  justify-content: center;
+}
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 20px;
+  margin: 0 2px;
+  border:2px solid white;
+  background-color: white;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@media screen  and (max-width:400px) {
+  /*There is a maximum image height for several screen sizes;
+   always determine the size of the images based on these values.  */
+  .carousel-image{
+    max-height: 300px;
+  }
+  .dot{
+    height: 8px;
+    width: 15px;
+  }
+}
+
+@media screen  and (min-width:400px) {
+  .carousel-image{
+    max-height: 300px;
+  }
+  .dot{
+    height: 10px;
+    width: 17px;
+  }
+}
+
+@media screen  and (min-width:600px) {
+  .carousel-image{
+    max-height: 450px;
+  }
+  .dorcas{
+    bottom: 1.5%;
+  }
+}
+
+
+@media screen  and (min-width:800px) {
+  .carousel-image{
+    max-height: 550px;
+  }
+  .dorcas{
+    bottom: 1.5%;
+  }
+}
+
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

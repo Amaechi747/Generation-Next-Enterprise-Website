@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color:lightcoral !important;
+}
+
+.logo{
+    padding: 7px;
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+    align-self: center;
+}
+
+.logo a:hover{
+    color: lightpink;
+}
+
+
+.toggle{
+    order: 1;
+    margin: 7px ;
+    border:1px solid white;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 3px 10px;
+}
+
+.item{
+    order: 3;
+    padding: 10px;
+    color: white;
+    font-family: sans-serif;
+    border-top: 0.1px solid white;   
+}
+
+.item a:hover{
+    color: wheat; 
+}
+
+.item:not(.special) {
+    margin:0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.special{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    display: block;
+    color:white;
+}
+
+li a{
+    color:white;
+} 
+
+.sub-menu{
+    display: none;
+}
+
+.sub-menu li:hover{
+    background-color: lightpink;
+    border-radius: 3px;
+    transition: background-color 0.1s ease-out  ; 
+}
+
+.sub-menu li{
+    padding-top: 5px;
+}
+
+#sub-menu-active {
+    display: block;
+    background-color:lightcoral;
+}
+/* I created an active class here to be inputed by the toggle function */
+
+.active .item{
+    display: none;
+}
+
+.item .button {
+    order: 2;
+    display: flex;
+}
+
+.special > a::after{
+    font-family: "Font Awesome 5 free";
+    content:"\f078";
+    font-weight: 900;
+    margin-left: 1px;
+    line-height: 16px;
+}
+
+
+@media all and (min-width:760px){
+    .menu{
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: lightcoral;
+    }
+
+    .logo{
+        margin-left: 0.5%;
+        margin-right: 15%;
+        display: flex;
+        flex:1;
+    }
+
+    .toggle{
+        order: 2;
+    }
+
+    .menu .button{
+        order: 1;
+        width: fit-content;
+        display: flex;
+        flex-wrap: nowrap;
+        border: none;
+        justify-content: center;
+    }
+
+    /* .Tags is created via javascript to add select styles to the buttons only */
+    /* Try to make sure these styles work. In respect of the tablet logIn and active mode */
+    .active .tags{
+        display: flex;
+        margin: 2px;
+        padding: 6px 4px;
+        border: 0.1px solid whitesmoke;
+        border-radius: 3px;
+    }
+
+    .active .tags:active{
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    #sign-up-button{
+        background-color: turquoise;
+        border: none;
+        padding: 6px 4px;
+        margin-left: 4px;
+        box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5) ;
+        border-radius: 3px;
+        /* To create an even more 3D box-shadow use the following
+        box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 rgba(0,0,0,0.5);
+        */
+    }
+    
+    #sign-up-button:active{
+        background-color: deepskyblue;
+    }
+
+}
+
+@media all and (min-width:960px){
+
+    .logo{
+        margin-left: 0.5%;
+        margin-right: 2.5%;
+        flex: 1.5;
+    }
+    
+    .toggle{
+        display: none;
+    }
+    
+    .active {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .active .item{
+        display: flex;
+        flex: 1;
+        
+    }
+    
+    .item{
+        order: 1;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        border: none;
+    }
+    
+    .menu .button{
+        order: 2;
+        border: 1px solid white;
+        padding: 6px 4px;
+        margin: 2px;
+        border-radius: 3px;
+    }
+    .menu .button:active{
+        background-color: lightpink;
+    }
+    #sign-up-button {
+        border-radius: 3px;
+        border: none;
+        background-color: turquoise;
+    } 
+
+    #sign-up-button:active{
+        background-color: dodgerblue;
+        
+    }
+    .menu .special-dropdowns{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 5px;
+    }
+
+    .menu .item .first-sub-menu {
+        display:none;
+        position: absolute;
+        width: 130px;
+        left: 37.5%;
+        top: 46px;
+        z-index: 1;
+        background: lightcoral;
+    }
+    .active .sub-menu {
+        display:none;
+        position: absolute;
+        width: 130px;
+        left: 51%;
+        top: 46px;
+        z-index: 1;
+        background: lightcoral;
+    }
+
+    .special .sub-menu .sub-item{
+        margin: 3px;
+        padding: 5px;
+        border-radius: 0;
+    }
+
+
+}

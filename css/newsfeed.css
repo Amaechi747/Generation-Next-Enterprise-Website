@@ -1,0 +1,265 @@
+/* Css rest */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Set the attribute of top stories div block */
+.top-stories{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: lightcoral;
+}
+
+.top-stories a{
+    margin: auto;
+    font-family: 'Roboto',sans-serif ;
+    font-weight: bold;
+    color: white;
+}
+
+.top-stories:hover{
+    background-color: lightpink;
+}
+/* Set the attributes of newsfeed div */
+.news-feed-topic, .article-feed-topic{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 3px auto;
+    padding: 4px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    background-color: blueviolet;
+}
+
+.news-feed, .article-feed{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:lightgray; 
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.news-feed p, .article-feed p{
+    text-align: justify;
+}
+
+.news-feed-picture, .article-feed-picture{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 250px;
+    height: 200px;
+}
+/* Made the display in full and also made it round here */
+.image-class{
+    width: 100%;
+    border-radius: 50%; 
+}
+/* Set the attributes of .readmore */
+.news-feed .read-more, .article-feed .read-more{
+    width: 100%;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+}
+
+.read-more a{
+    color: white;
+    margin: 4px 1px;
+    font-size: small;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: tomato;
+    -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+/* Set the color of arrow element to white in .readmore  */
+.fas{
+    color: white;
+}
+/* The blog section starts here */
+.blog{
+    margin: 3px 12px;
+    padding: 4px;
+    display: block;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    background-color: lightskyblue;
+}
+
+.blog-signpost{
+    margin: 3px;
+    padding: 4px;
+    border-bottom: 1px solid white;
+}
+
+.blog-signpost a{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+.comment-label{
+   display: flex;
+   margin: 5px;
+   font-family: sans-serif;
+   font-size: small;
+}
+.blog-post-comment{
+    padding: 5px;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid white;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    box-shadow: inset 2px 2px 2px 0px #dddddd
+}
+.comment-button{
+    border-radius: 3px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 700;
+    color: black;
+    border: 1px solid white;
+    padding: 3px;
+    width: 50px;
+}
+.bloglogin{
+    width: 100%;
+    margin: 7px 3px;
+}
+.bloglogin a{
+    padding: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    color: white;
+    border-radius: 5px;
+    background-color: lightcoral;
+    -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+@media all and (min-width:420px){
+
+    .news-feed-picture, .article-feed-picture{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        width: 400px;
+        height: 200px;
+    }
+
+    .image-class{
+        width: 100%;
+        border-radius: 0; 
+    }
+
+}
+@media all and (min-width:560px){
+
+    .news-feed-picture, .article-feed-picture{
+        width: 540px;
+        height: 300px;
+    }
+
+}
+@media all and (min-width:760px){
+
+    .news-feed-picture, .article-feed-picture{
+        width: 740px;
+        height: 340px;
+    }
+
+}
+
+/* The site layout changed from this screen size */
+@media all and (min-width:960px){
+
+    /* .news-feed-picture, .article-feed-picture{
+        width: 740px;
+        height: 340px;
+    } */
+
+    .content{
+        display: flex;
+        /* justify-content: flex-start; */
+    }
+
+    /* Remove the background colour */
+    .news-feed, .article-feed{
+        /* display: grid; */
+        grid: auto-flow dense / 40px 40px 1fr;
+        /* flex-wrap: wrap;
+        justify-self: flex-start;
+        justify-content: space-between; */
+        background-color: white;
+        box-shadow: none;
+        -moz-box-shadow:none;
+    }
+
+    /* Do not display the paragraghs */
+    .news-feed p, .article-feed, .news-feed .read-more, .top-stories{
+        display: none;
+    }
+
+
+    .image-class{
+        width: 100px;
+        height: 280px;
+        display: flex;
+        flex: 0.6;
+        flex-wrap: nowrap;
+        padding: unset;
+        margin: unset;
+    }
+
+    .news-feed-topic, .article-feed-topic{
+        color: black;
+        background-color: unset;
+    }
+
+}
